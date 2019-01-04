@@ -28,7 +28,21 @@ namespace Main
             //Check(delimiterString);
 
             //Queue
-            QueueImplementation();
+            //QueueImplementation();
+
+            //PriorityQueue
+            PriorityQueue pq = new PriorityQueue(5);
+            pq.Insert(30);
+            pq.Insert(50);
+            pq.Insert(10);
+            pq.Insert(40);
+            pq.Insert(20);
+
+            while (!pq.IsEmpty())
+            {
+                var value = pq.Remove();
+                Console.WriteLine($"Value removed is {value} ");
+            }
 
             Console.ReadKey();
         }
